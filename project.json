@@ -1,7 +1,7 @@
 {
-  "name": "Input Methods and Input activities",
+  "name": "RPA_Training_Tutorials",
   "projectId": "6f6cfcc4-2c22-45d5-92d3-e5c893e06030",
-  "description": "I will create an automation to deposit a transanction in the Double UI application. In this project I will be using \"Type Into\", \"Click\", \"Use Application/Browser\" activities to accomplish the automation.",
+  "description": "",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.24.3]",

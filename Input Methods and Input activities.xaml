@@ -82,37 +82,44 @@
       <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="902.4000000000001,1380.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1195,1432" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="483.2,1357.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="I will create an automation to deposit a transanction in the Double UI application. In this project I will be using &quot;Type Into&quot;, &quot;Click&quot;, &quot;Use Application/Browser&quot; activities to accomplish the automation." DisplayName="Sequence Input Methods and Input Activities" sap:VirtualizedContainerService.HintSize="484,1409" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard sap2010:Annotation.AnnotationText="" AttachMode="ByInstance" DisplayName="Use Application: DoubleUI" sap:VirtualizedContainerService.HintSize="449.6,1251.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="a62c1f2f-e162-45b4-9d99-304e27ffaae6" Version="V2">
+      <uix:NApplicationCard sap2010:Annotation.AnnotationText="" AttachMode="ByInstance" DisplayName="Use Application: DoubleUI" sap:VirtualizedContainerService.HintSize="450,1269" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="a62c1f2f-e162-45b4-9d99-304e27ffaae6" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,928.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,924" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="&quot;Type into&quot; enables us to enter text into a specified UI Element, such as a text box or any input field&#xD;&#xA;Are 2 type of intput: Standard - for normal text, Secure for passwords" ClickBeforeMode="None" DisplayName="Type Into 'Cash In'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,362.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="a62c1f2f-e162-45b4-9d99-304e27ffaae6" Text="1000" Version="V4">
+              <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="&quot;Type into&quot; enables us to enter text into a specified UI Element, such as a text box or any input field&#xA;Are 2 type of intput: Standard - for normal text, Secure for passwords" ClickBeforeMode="None" DisplayName="Type Into 'Cash In'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,358" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="a62c1f2f-e162-45b4-9d99-304e27ffaae6" Text="1000" Version="V4">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable CVScreenId="6e8fe739-60fc-4999-bfe2-9f4f8ac8963b" CvElementArea="413, 209, 154, 31" CvType="InputBox" DesignTimeRectangle="415, 211, 150, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='cashintb' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='cashintb' role='editable text' /&gt;" Guid="2c2a2748-f67c-4fc6-b8da-eda2e1e58639" InformativeScreenshot="d86f4ef2e6b7f9bec15f82e1719c902d.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                         <uix:Target CVScreenId="6e8fe739-60fc-4999-bfe2-9f4f8ac8963b" CvTextArea="328, 213, 62, 16" CvTextArgument="Cash In" CvType="Text" DesignTimeRectangle="329, 213, 60, 20" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Cash In' role='text' /&gt;&lt;ctrl name='Cash In' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Cash In' role='text' /&gt;&lt;ctrl name='Cash In' role='text' automationid='' check:text='Cash In' /&gt;" Guid="8ab29c7b-8782-4fcd-bbd8-72f155e32bea" SearchSteps="Selector, FuzzySelector, CV" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
@@ -134,11 +141,11 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'On Us Check'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="a62c1f2f-e162-45b4-9d99-304e27ffaae6" Text="2000" Version="V4">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'On Us Check'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="a62c1f2f-e162-45b4-9d99-304e27ffaae6" Text="2000" Version="V4">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable CVScreenId="d2fd5789-9b48-45ca-b110-fd9a54727a9f" CvElementArea="413, 256, 154, 32" CvType="InputBox" DesignTimeRectangle="415, 259, 150, 29" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='onustb' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='onustb' role='editable text' /&gt;" Guid="5a1f1311-06fd-4e59-957a-0de1ef82e365" InformativeScreenshot="3d9b141c915fad560a714b3542aa2a66.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                         <uix:Target CVScreenId="d2fd5789-9b48-45ca-b110-fd9a54727a9f" CvTextArea="283, 262, 107, 16" CvTextArgument="On Us Check" CvType="Text" DesignTimeRectangle="285, 262, 104, 20" ElementType="Text" FullSelectorArgument="&lt;ctrl name='On Us Check' role='text' /&gt;&lt;ctrl name='On Us Check' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='On Us Check' role='text' /&gt;&lt;ctrl name='On Us Check' role='text' automationid='' check:text='On Us Check' /&gt;" Guid="dea96402-316d-40ce-84e5-3d92c8b75b61" SearchSteps="Selector, FuzzySelector, CV" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
@@ -155,11 +162,11 @@
                   </uix:VerifyExecutionTypeIntoOptions>
                 </uix:NTypeInto.VerifyOptions>
               </uix:NTypeInto>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Accept'" sap:VirtualizedContainerService.HintSize="382.4,218.4" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a62c1f2f-e162-45b4-9d99-304e27ffaae6" Version="V4">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Accept'" sap:VirtualizedContainerService.HintSize="382,218" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a62c1f2f-e162-45b4-9d99-304e27ffaae6" Version="V4">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable CVScreenId="59fcb08f-ebfa-43e7-a6a2-0cd50dd8e99d" CvElementArea="548, 680, 103, 41" CvTextArea="575, 692, 48, 17" CvTextArgument="Accept" CvType="Button" DesignTimeRectangle="577, 693, 46, 17" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Accept' role='push button' /&gt;&lt;ctrl name='Accept' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Accept' role='push button' /&gt;&lt;ctrl name='Accept' role='text' automationid='' check:text='Accept' /&gt;" Guid="016c383a-88f3-498b-85c5-eb48e2a1f1d8" InformativeScreenshot="e055403fa0b09921b72f52e5f84a5648.png" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                         <uix:Target CVScreenId="59fcb08f-ebfa-43e7-a6a2-0cd50dd8e99d" CvElementArea="548, 680, 103, 41" CvTextArea="575, 692, 48, 17" CvTextArgument="Accept" CvType="Button" DesignTimeRectangle="550, 682, 100, 39" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Accept' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Accept' role='push button' automationid='' check:text='Accept' /&gt;" Guid="60a8b3fb-9820-49b7-800e-9d3eaad95b66" SearchSteps="Selector, FuzzySelector, CV" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
@@ -180,7 +187,7 @@
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="64, 64, 781, 785" FilePath="C:\Users\test\Documents\GIthub\RPA_Training_Tutorials\Input Methods and Input activities\DoubleUI\doubleui.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFtSURBVFhH7dXNSsNAFIbhKCKKiCKit+q/FetCcC0EXAribYh4CyZxnwvIf7I5ckrGpEMmMzkH0yhz4MVSann4sqhjz569/3J39w8wpWpWc10f+q3e3j8W9b2uWc2Jfx6j55fXRX2va1Zz+GYYhpNICayqavTKslyqKAragvhlzsknORmGdeG0wEf36eevqA08nn/B0TyAw9sADm4C2J8FsDfzYffah50rH7YvPdi68GDz3IONMw/WTxug67ra2AsOxa21gCLVckYLqhJACm7Ignme8x4xBSeAuuUQpwWqEkAKDkNQ12JybCAFh5ksh2VZxnvEFBxmuqAWqEoAKTjMZDkRC0jBYQjqWkyO/YgpOMxkOSxNU96CFBxmuiAbSMFhJsuJWEAKDkNU12JybCAFh5kshyVJwgNSUy0o41YGNFluMsA+XBzHqwXqcCwg1v7RH/LzZYpjAcfAkYFj4aIoUgOnVM2yZ8/eHz/H+QYcnCQCIP+zCQAAAABJRU5ErkJggg==" InformativeScreenshot="6552b548dc5a6c6aee84db2512f79715.png" Selector="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" Title="DoubleUI" />
+          <uix:TargetApp Area="64, 64, 781, 785" FilePath="DoubleUI\doubleui.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFtSURBVFhH7dXNSsNAFIbhKCKKiCKit+q/FetCcC0EXAribYh4CyZxnwvIf7I5ckrGpEMmMzkH0yhz4MVSann4sqhjz569/3J39w8wpWpWc10f+q3e3j8W9b2uWc2Jfx6j55fXRX2va1Zz+GYYhpNICayqavTKslyqKAragvhlzsknORmGdeG0wEf36eevqA08nn/B0TyAw9sADm4C2J8FsDfzYffah50rH7YvPdi68GDz3IONMw/WTxug67ra2AsOxa21gCLVckYLqhJACm7Ignme8x4xBSeAuuUQpwWqEkAKDkNQ12JybCAFh5ksh2VZxnvEFBxmuqAWqEoAKTjMZDkRC0jBYQjqWkyO/YgpOMxkOSxNU96CFBxmuiAbSMFhJsuJWEAKDkNU12JybCAFh5kshyVJwgNSUy0o41YGNFluMsA+XBzHqwXqcCwg1v7RH/LzZYpjAcfAkYFj4aIoUgOnVM2yZ8/eHz/H+QYcnCQCIP+zCQAAAABJRU5ErkJggg==" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="6552b548dc5a6c6aee84db2512f79715.png" Selector="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" Title="DoubleUI" />
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
