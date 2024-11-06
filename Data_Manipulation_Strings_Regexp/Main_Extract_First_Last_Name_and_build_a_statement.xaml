@@ -83,19 +83,15 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main_Extract_First_Last_Name_and_build_a_statement" sap:VirtualizedContainerService.HintSize="758.4000000000001,1505.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main_Extract_First_Last_Name_and_build_a_statement" sap:VirtualizedContainerService.HintSize="758.4000000000001,2227.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Create a workflow using string activities that extracts the First and Last Name of an employee from a text file and uses this information to fill in the placeholder text in the string below.&#xD;&#xA;&#xD;&#xA;&quot;Hello Mr/Ms/Mrs &lt;first_name&gt; &lt;last_name&gt;, we would like to invite you to our product launch event next week. Please confirm by the end of current week.&quot;" DisplayName="Extract First and Last Name and build the statement" sap:VirtualizedContainerService.HintSize="449.6,2180.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Create a workflow using string activities that extracts the First and Last Name of an employee from a text file and uses this information to fill in the placeholder text in the string below.&#xA;&#xA;&quot;Hello Mr/Ms/Mrs &lt;first_name&gt; &lt;last_name&gt;, we would like to invite you to our product launch event next week. Please confirm by the end of current week.&quot;" DisplayName="Extract First and Last Name and build the statement" sap:VirtualizedContainerService.HintSize="449.6,2204" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
-        <Variable x:TypeArguments="x:String" Name="file_employee_details_path">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:String">Input_Files/in_EmployeeDetails.txt</Literal>
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="x:String" Default="Input_Files/in_EmployeeDetails.txt" Name="file_employee_details_path" />
         <Variable x:TypeArguments="x:String" Name="employeeDetails" />
         <Variable x:TypeArguments="x:String" Name="strFirstName" />
         <Variable x:TypeArguments="x:String" Name="strLastName" />
@@ -127,7 +123,7 @@
       </ui:ModifyText>
       <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right strLastName" FullText="[employeeDetails]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_2" Separator="Last Name:" SeparatorKey="Custom" TextToRight="[strRightTextLastName]" />
       <ui:TextToLeftRight TextToRight="{x:Null}" CustomSeparatorEnabled="False" DisplayName="Text to Left/Right strLastName" FullText="[strRightTextLastName]" sap:VirtualizedContainerService.HintSize="416,273.6" sap2010:WorkflowViewState.IdRef="TextToLeftRight_4" Separator="&#xD;&#xA;" SeparatorKey="NewLine" TextToLeft="[strLastName]" />
-      <ui:ModifyText DisplayName="Modify Text strLastName" sap:VirtualizedContainerService.HintSize="416,279.2" sap2010:WorkflowViewState.IdRef="ModifyText_2" OutputText="[strLastName]" SourceText="[strLastName]">
+      <ui:ModifyText DisplayName="Modify strLastName" sap:VirtualizedContainerService.HintSize="416,279.2" sap2010:WorkflowViewState.IdRef="ModifyText_2" OutputText="[strLastName]" SourceText="[strLastName]">
         <ui:ModifyText.Body>
           <ActivityAction>
             <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_4">
@@ -141,7 +137,7 @@
           </ActivityAction>
         </ui:ModifyText.Body>
       </ui:ModifyText>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[String.Format(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;Hello Mr/Ms/Mrs {0} {1}, we would like to invite you to our product launch event next week. Please confirm by the end of current week.&quot;,&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;strFirstName, &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;strLastName&#xD;&#xA;)]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[String.Format(&#x9;&#x9;&#x9;&#x9;&#x9;&quot;Hello Mr/Ms/Mrs {0} {1}, we would like to invite you to our product launch event next week. Please confirm by the end of current week.&quot;,&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;strFirstName, &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;strLastName&#xA;)]" />
     </Sequence>
   </Sequence>
 </Activity>

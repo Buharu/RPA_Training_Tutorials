@@ -101,16 +101,17 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main_extract_invoice_details" sap:VirtualizedContainerService.HintSize="902.4000000000001,716.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main_extract_invoice_details" sap:VirtualizedContainerService.HintSize="758.4000000000001,920.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="449.6,693.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence sap2010:Annotation.AnnotationText="Develop a process using the Modern Design Experience that automates the extraction of invoice details. The process should be capable of performing the following actions: &#xD;&#xA;&#xD;&#xA;Read an input Excel file with the invoice numbers. &#xD;&#xA;Sign in to the ACME website. &#xD;&#xA;Navigate to the invoice search page. &#xD;&#xA;For each invoice number in the Excel file, search for the invoice number. &#xD;&#xA;Extract the invoice details, including Vendor Tax ID, Invoice Item, Total, and Date. &#xD;&#xA;Write the extracted invoice details to an Excel file stored in the project folder. " sap:VirtualizedContainerService.HintSize="449.6,897.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LoginSequence - Invoke Workflow File (Extract_invoice_details_Web_Site\LoginSequence.xaml)" sap:VirtualizedContainerService.HintSize="416,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Extract_invoice_details_Web_Site\LoginSequence.xaml">

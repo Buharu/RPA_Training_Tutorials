@@ -79,25 +79,22 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main_Extract_email_from_a_statement" sap:VirtualizedContainerService.HintSize="902.4000000000001,1622.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main_Extract_email_from_a_statement" sap:VirtualizedContainerService.HintSize="758.4000000000001,1653.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Extract email from a statement without Regex" sap:VirtualizedContainerService.HintSize="617.6,1599.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Extract the email address from a statement without using Regex" DisplayName="Extract email from a statement without Regex" sap:VirtualizedContainerService.HintSize="617.6,1630.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="initial_message" />
         <Variable x:TypeArguments="x:String" Name="email" />
-        <Variable x:TypeArguments="scg:List(x:String)" Name="array_email">
-          <Variable.Default>
-            <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="New List (Of String)" />
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="scg:List(x:String)" Default="[New List (Of String)]" Name="array_email" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Assign sap:VirtualizedContainerService.HintSize="584,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">

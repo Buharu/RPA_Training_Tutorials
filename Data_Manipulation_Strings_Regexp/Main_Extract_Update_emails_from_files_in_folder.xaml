@@ -90,7 +90,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main_Extract_Update_emails_from_files_in_folder" sap:VirtualizedContainerService.HintSize="707.2,1898.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main_Extract_Update_emails_from_files_in_folder" sap:VirtualizedContainerService.HintSize="758.4000000000001,2907.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strFirstName" />
       <Variable x:TypeArguments="x:String" Name="strAge" />
@@ -100,18 +100,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="The user details are stored in a project folder called ‘Input’ and we’ll iterate through each of them to update the email address of all the users. " sap:VirtualizedContainerService.HintSize="550.4,1875.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="The user details are stored in a project folder called ‘Input_Files_Data_Manipulation’ and we’ll iterate through each of them to update the email address of all the users. " sap:VirtualizedContainerService.HintSize="550.4,2884" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
-        <Variable x:TypeArguments="x:String" Name="folder_in_path">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:String">C:\Users\test\Documents\Github RPA\RPA_Training_Tutorials\Input_Files\Input_Files_Data_Manipulation</Literal>
-          </Variable.Default>
-        </Variable>
-        <Variable x:TypeArguments="x:String" Name="folder_out_path">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:String">C:\Users\test\Documents\Github RPA\RPA_Training_Tutorials\Output_Files\Output_Files_Data_Manipulation</Literal>
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="x:String" Default="C:\Users\test\Documents\Github RPA\RPA_Training_Tutorials\Input_Files\Input_Files_Data_Manipulation" Name="folder_in_path" />
+        <Variable x:TypeArguments="x:String" Default="C:\Users\test\Documents\Github RPA\RPA_Training_Tutorials\Output_Files\Output_Files_Data_Manipulation" Name="folder_out_path" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -119,7 +111,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[folder_in_path]" sap:VirtualizedContainerService.HintSize="516.8,1748" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="True" OrderBy="NameAscFirst" SkipFolderWithoutPermission="True">
+      <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[folder_in_path]" sap:VirtualizedContainerService.HintSize="516.8,2756.8" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="True" OrderBy="NameAscFirst" SkipFolderWithoutPermission="True">
         <ui:ForEachFileX.Body>
           <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
             <ActivityAction.Argument1>
@@ -128,7 +120,7 @@
             <ActivityAction.Argument2>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
             </ActivityAction.Argument2>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,1461.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,2470.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="strDetails" />
               </Sequence.Variables>
@@ -193,14 +185,14 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ModifyText>
               </Sequence>
-              <Sequence sap2010:Annotation.AnnotationText="Extracting the Age from the Details Provided and Multiplying with Certain number" DisplayName="Extrapolating Age" sap:VirtualizedContainerService.HintSize="449.6,100.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence sap2010:Annotation.AnnotationText="Extracting the Age from the Details Provided and Multiplying with Certain number" DisplayName="Extrapolating Age" sap:VirtualizedContainerService.HintSize="449.6,524.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="strRightText2" />
                   <Variable x:TypeArguments="x:Int32" Name="intAge" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
@@ -299,7 +291,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ModifyText>
               </Sequence>
-              <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="ModifyText_5" OutputText="[strDetails]" SourceText="[strDetails]">
+              <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="449.6,641.6" sap2010:WorkflowViewState.IdRef="ModifyText_5" OutputText="[strDetails]" SourceText="[strDetails]">
                 <ui:ModifyText.Body>
                   <ActivityAction>
                     <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -316,7 +308,7 @@
                 </ui:ModifyText.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
