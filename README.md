@@ -133,6 +133,44 @@ Methods used:
 * CurrentFile.FullName
 * Replace
 
+## Main_Merge_Sort_Lists
+
+Create 2 lists: 
+          First, "UKCities" with the "Build Collection Activity" and containts: "London" first element and "MACHESTER" the second.
+          Second, "ESCities" by initializate as the defauld value egal to {"MADRID",  "valencia", "BARCELONA"}.
+
+Request:
+           1. Merge the 2 lists
+           2. Sort them by using "Invoke Method Activity"
+           3. Create a new list that contains the cities writo by TitleCase and display the new list with String.Join method in a "Log Message Activity"
+
+Activities used:
+* Build Collection
+* Merge Collections
+* Invoke Method - Sort
+* For Each
+* Assign
+* Append Items to Collection
+* Log Message
+
+Methods:
+* String.Join
+
+## Main_Sort_Asc_Print_last_3_element_desc
+Given a list of countries as input, please sort the list in alphabetical order, then print out the first three values in descending order in the Output Panel. 
+
+Note: Use this value for the List initialization: new List (of String) from {"Germany", "Spain", "Japan", "Brazil", "India", "China"}. 
+
+Activities used:
+* Invoke Method - Sort
+* Invoke Method - Reverse
+* Log Message
+
+Methods used:
+* String.Join
+* List.GetRange
+
+
 ## Main_Extract_Addresses_RegEx
 Searches and matches a set of items from a string containing multiple items, them outputs the matched results
 
