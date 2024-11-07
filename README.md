@@ -159,7 +159,7 @@ Methods:
 ## Main_Sort_Asc_Print_last_3_element_desc
 Given a list of countries as input, please sort the list in alphabetical order, then print out the first three values in descending order in the Output Panel. 
 
-Note: Use this value for the List initialization: new List (of String) from {"Germany", "Spain", "Japan", "Brazil", "India", "China"}. 
+Note: Use this value for the List initialization: {"Germany", "Spain", "Japan", "Brazil", "India", "China"}. 
 
 Activities used:
 * Invoke Method - Sort
@@ -170,6 +170,37 @@ Methods used:
 * String.Join
 * List.GetRange
 
+## Main_Tour_France_No_Victories_for_Dictionary_Elements
+Given a dictionary containing a year and associated name as input:
+
+Calculate the number of victories of each winner.
+Print every winner's name with its corresponding number of victories in the output panel.  
+Note: Initialize a dictionary of type (Int32, String) with the following value -  {{2006,"Oscar Pereiro"},{2007,"Alberto Contador"}, {2008, "Carlos Sastre"}, {2009,"Alberto Contador"}, {2010, "Andy Schleck"}, {2011, "Cadel Evans"}, {2012,"Bradley Wiggins"}, {2013,"Chris Froome"}, {2014,"Vincenzo Nibali"},{2015,"Chris Froome"},{2016,"Chris Froome"},{2017,"Chris Froome"}, {2018,"Geraint Thomas"}}
+
+## Main_Calculate_Weekday_for_Dictionary_Element
+Initialize an empty dictionary where to save the next information:
+Key                   Value
+Jamie Hanks     11/25/1989
+Willie Gamer     01/08/1987
+Patricia Shaw     04/14/2005
+
+Requests:
+     In what day of the week will be the birthdate of each person from dictionary in the current year?
+     Display in console if the birthday was pass or it will be in future
+
+Activities used:
+* Assign
+* For Each
+* IF
+* Log Message
+
+Methods used:
+* dictionaryVariable.Keys
+* DateTime.Parse
+* DateTime.Today.Year
+* birthday.Month
+* birthday.Day
+* String.Format
 
 ## Main_Extract_Addresses_RegEx
 Searches and matches a set of items from a string containing multiple items, them outputs the matched results
