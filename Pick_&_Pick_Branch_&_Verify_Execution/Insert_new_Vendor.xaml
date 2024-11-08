@@ -1,0 +1,286 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Insert_new_Vendor" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Insert_new_Vendor_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Insert_new_Vendor" sap:VirtualizedContainerService.HintSize="912.0000000000001,2604.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: ACME System 1 - Add Vendor" sap:VirtualizedContainerService.HintSize="449.6,2581.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="333bbe5f-bff2-4415-b9ce-6823e2ef223c" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,2341.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Vendor TaxID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="333bbe5f-bff2-4415-b9ce-6823e2ef223c" Text="10001" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/vendors/add" CVScreenId="9824a14f-a9c1-47e8-9205-d7fb59115df5" CvElementArea="332, 519, 612, 48" CvType="InputBox" DesignTimeRectangle="334, 522, 607, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='vendorTaxId' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='vendorTaxId' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="a2bd513d-830c-4a5e-90fe-2318d509b026" InformativeScreenshot="b8319ef5cd88ed62448f4af18a771312.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Vendor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="9824a14f-a9c1-47e8-9205-d7fb59115df5" CvTextArea="332, 492, 118, 18" CvTextArgument="Vendor TaxID:" CvType="Text" DesignTimeRectangle="334, 491, 117, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Vendor TaxID:' check:innerText='Vendor TaxID:' /&gt;" Guid="c06b4e16-f599-4109-8635-d5fb51a36eb5" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="333bbe5f-bff2-4415-b9ce-6823e2ef223c" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/vendors/add" CVScreenId="9824a14f-a9c1-47e8-9205-d7fb59115df5" CvElementArea="332, 612, 611, 46" CvType="InputBox" DesignTimeRectangle="334, 614, 607, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='name' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='name' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="40604cf3-765f-41a1-b5a9-d0998c68aa5e" InformativeScreenshot="0583a3e86a1ed0eaf7cf07445cddd864.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Vendor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="9824a14f-a9c1-47e8-9205-d7fb59115df5" CvTextArea="334, 585, 53, 17" CvTextArgument="Name:" CvType="Text" DesignTimeRectangle="334, 583, 54, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Name:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Name:' tag='LABEL' type='' class='' check:innerText='Name:' /&gt;" Guid="50c89444-5e26-458d-9292-4e5f24acc038" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="333bbe5f-bff2-4415-b9ce-6823e2ef223c" Text="Ironman Inc" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/vendors/add" CVScreenId="6267f1ab-4f16-4785-b8da-88dbb2835ee2" CvElementArea="332, 612, 611, 46" CvType="InputBox" DesignTimeRectangle="334, 614, 607, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='name' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='name' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="bc2da8d9-c9ec-4a3a-baef-c870db8cd657" InformativeScreenshot="7885956ab8b29e03c1b414f966221106.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Vendor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="6267f1ab-4f16-4785-b8da-88dbb2835ee2" CvTextArea="334, 585, 53, 17" CvTextArgument="Name:" CvType="Text" DesignTimeRectangle="334, 583, 54, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Name:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Name:' tag='LABEL' type='' class='' check:innerText='Name:' /&gt;" Guid="99eaf041-f08f-41a0-89f5-d1a60e440b86" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="333bbe5f-bff2-4415-b9ce-6823e2ef223c" Text="1 MG Road" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/vendors/add" CVScreenId="a12b184c-d26c-4aee-b751-459291de002c" CvElementArea="332, 704, 612, 47" CvType="InputBox" DesignTimeRectangle="334, 707, 607, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='address' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='address' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="1de66fcc-9f85-437b-ba41-5814b018cf23" InformativeScreenshot="73f1e67a51856e8419f4cb91cb68b723.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Vendor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="a12b184c-d26c-4aee-b751-459291de002c" CvTextArea="332, 679, 77, 16" CvTextArgument="Address:" CvType="Text" DesignTimeRectangle="334, 676, 76, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Address:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Address:' tag='LABEL' type='' class='' check:innerText='Address:' /&gt;" Guid="4c398476-4d4f-4bd5-85fa-ade6baf07228" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'City'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="333bbe5f-bff2-4415-b9ce-6823e2ef223c" Text="Bengaluru" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/vendors/add" CVScreenId="0407f384-fc3a-43cf-98aa-8fa8def86a79" CvElementArea="332, 797, 611, 46" CvType="InputBox" DesignTimeRectangle="334, 800, 607, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='city' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='city' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="850c101b-10d6-4db0-b8cd-7eeb078e118b" InformativeScreenshot="e61ce198348ca08f04eeeee1add2d728.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Vendor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="0407f384-fc3a-43cf-98aa-8fa8def86a79" CvTextArea="332, 770, 40, 20" CvTextArgument="City:" CvType="Text" DesignTimeRectangle="334, 768, 39, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='City:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='City:' tag='LABEL' type='' class='' check:innerText='City:' /&gt;" Guid="7cbedd1a-6738-4b4c-b0cb-f9e145cab8e1" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Country'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="333bbe5f-bff2-4415-b9ce-6823e2ef223c" Text="India" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/vendors/add" CVScreenId="d38a40bf-566c-428f-8da1-86e2c627a954" CvElementArea="333, 889, 611, 47" CvType="InputBox" DesignTimeRectangle="334, 892, 607, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='country' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='country' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="c5bb842e-65fd-4901-a699-295065e660c3" InformativeScreenshot="f4dde69bad599ca2afc2b87212a6ccb5.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Vendor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d38a40bf-566c-428f-8da1-86e2c627a954" CvTextArea="332, 862, 75, 21" CvTextArgument="Country:" CvType="Text" DesignTimeRectangle="334, 861, 73, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Country:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Country:' tag='LABEL' type='' class='' check:innerText='Country:' /&gt;" Guid="94ff832c-0955-43e7-b7b6-e079bc91f026" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save Vendor'" sap:VirtualizedContainerService.HintSize="382.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="333bbe5f-bff2-4415-b9ce-6823e2ef223c" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/vendors/add" CVScreenId="d38a40bf-566c-428f-8da1-86e2c627a954" CvElementArea="333, 951, 135, 46" CvTextArea="349, 964, 103, 17" CvTextArgument="Save Vendor" CvType="Button" DesignTimeRectangle="334, 953, 133, 42" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl id='addVendor' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='addVendor' tag='BUTTON' type='button' class='btn btn-primary' aaname='Save Vendor' check:innerText='Save Vendor' /&gt;" Guid="10e39cb2-3130-47ec-86d2-4166e3c7a579" InformativeScreenshot="e426e72594780f2f987869ecb924987d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Vendor' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Label 'Vendor was saved!'" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/vendors/add" CVScreenId="bb4a49a3-4523-4dd5-8d8a-83f695b22500" CvTextArea="707, 156, 135, 16" CvTextArgument="Vendor was saved!" CvType="Text" DesignTimeRectangle="709, 151, 520, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='Vendor was saved!' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='Vendor was saved!' role='text' automationid='' check:fulltext='Vendor was saved!' /&gt;" Guid="9b89ba2d-9374-49ac-8615-4a109b4cfe68" InformativeScreenshot="a35ae7c1acba07edcb1caceb138868ac.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Add Vendor - Personal - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CVScreenId="bb4a49a3-4523-4dd5-8d8a-83f695b22500" CvElementArea="1148, 193, 84, 43" CvTextArea="1176, 206, 25, 15" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1149, 194, 80, 40" ElementType="Button" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="e2b7e81a-2300-4c8a-a5f3-2fd4dbc89170" SearchSteps="Selector, FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="382.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="333bbe5f-bff2-4415-b9ce-6823e2ef223c" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CVScreenId="5f10da5d-d956-435a-9833-32fc7475bd7f" CvElementArea="1148, 193, 84, 43" CvTextArea="1176, 206, 25, 15" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1149, 194, 80, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="ab4d545b-7ab5-411b-9936-26ae04d62a30" InformativeScreenshot="3e1ca7c8825b154543cc972a801bd47c.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Add Vendor - Personal - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382.4,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Vendor added successfully&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASJSURBVFhHvZdtbFNlFMePblYqvkYTRFyCLOrQhC9CjB80KCqaiCF80C+CRhIZClHJ3AsDt+6FjnbttIyXzRfI3NiYZIm46AcDm4XRN9a1XStu6waL2dgq2xhTTJZtj/9zy23vZltZafnwb/Pc3uf5/3ruec55LtEeZz90FRq/xWLPiwwgQipltYfHCRfWZg/lNXyMhQaac4LybYJ22ZOjfBbWZ4gyyXOEAcZJiwF+XHvM31jlubwx79fBzJw4Jc/NahnM3GkOisfZrYOZWuvw+ztODRRTCSJRJEV6NAjARJ/bxYamC2sAQFiEMCkuyXMBQDCXxGMAEAAIAKTa2wE/h8AfVwAUOcRL9f7tyQb42j2yPJUBCucC4MLrjb0fJQpgaHJm2crKzrbVDf4qHssAVc7LT0QFWJsgACHEQyllLkEfmgVtMYtdbUMnZACjbTg6wBvfhwHS9nur1Tq3EzvD+UpjrymSGWvFN7+bqeic416D25NS4tzMc1svXdtEm1sEVXgEfdKGjO8QMkC5LRAdYN3xMIBa77pGhdiWORax8khXIJI5a0mlV1CuRVAx7tW0H74OQOlfnRe07bSkpt5xzbwB7jN6LFSMrbLTJp6r7T4ZyZy17KBvStrbKDIPfOEpUADQ7paBDbnWwFMACOXAoVg5MAvA4LEpAFoimbMAMMP3MMBCvbtwDgABgIb/nr5NBqh2jSQPQFXWEQJYesAn1Hgsd+k6BPKpQgao8YwmGOCQb1oGUCsicI/RLegz5AZKsErn0skAdd7EA4QioATAvxa0G7Ufze1hU2ehDFCbaID0KACP8u5gANT9RV/GAXC/8YYBIj6CuADeVAAs2OuyS10LW2xVTfepSOasjGrfpASgxb2lTs1NASgrIZLIiwonKNsi1jT4f45kzko7EDZaaHDrbwrghaP+EMC7P/WfoE/PCso6K56t6xmMZM5K1SHb0copxypMzsBWGeCRfXEAPF8bBjjsG90ilVJuKngMXVcnH5trPiPECsqzcgmWttvFvyYXywCLTJ3zB3i5YRYAqcthnodF+OYCh8g/fek9vT2QUf/b2PLc1oFs4l5RgrnbzohnaruvAECaGysCNbEAXlO0YwZo/mNiK71zEhmO3zkfEGZVOULO4ywUGT5DsskHZjE2LV5VAqRxDvCjQR1YbPIW3FAEIgDQ28397bQDufAx2ipP4s7HB0xEhK+rNA6x8ZcBHQBICUBamGw/IyUxorRfBqj3zR+AmvsmVr3V1PfjgzqXuBu1PRX9fYnRM7Hphwvf9f8zpYJoLsCLR3uupO/rnHqyyidW1/mzZYAjnhjNKAYAAYAAQAAgABAACADE5lEACAAEAAJAqB0fdMYAwJEsdChNFsC3rpGMqAA4lK67BQB0Jx7jf4/lyOb1x/tKj50fW1phDzytt86WDjJAZZYhaWyIcM//qdL55+M66/D6VE5QJC+8JYDgqxkgUvDDAiTa7fjmMCVad0C0B+LaEXwdlF7NggN+V+PXJd5eTJcMyWvLnix89ECjUECS9vp3MjR7bXg6u/4FPqMYP5QOgtAAAAAASUVORK5CYII=" InformativeScreenshot="1111c01ee426002355d0f8db76569387.jpg" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Add Vendor' /&gt;" Title="ACME System 1 - Add Vendor" Url="https://acme-test.uipath.com/vendors/add" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

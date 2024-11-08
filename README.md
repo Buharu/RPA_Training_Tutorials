@@ -3,6 +3,73 @@ This repository contains all the mini-projects I have developed. The primary goa
 
 # The mini-projects are:
 
+## Check_App_State_&_Verify_Execution
+Use the "Pick Activity", "Pick Branch Activity" and "verify execution" features to check if the user is logged in to the ACME page. 
+If the user is not logged in, log an error message. If the user is logged in, navigate to Vendor > Add New Vendor section. 
+Enter the details of the new vendor and verify that the vendor is added successfully. 
+
+Use the following details of a vendor: 
+
+Vendor ID: 10001 
+
+Vendor Name: Ironman Inc 
+
+Vendor Address: 1 MG Road 
+
+Vendor City: Bengaluru 
+
+Vendor Country : India 
+
+### Main_Pick_&_Pick_Branch_&_Verify_Execution
+Pick a branch to execute base on a trigger:
+1. Login Botton found:
+#### Login_to_Acme_Website
+Display a message that the robot will login on ACME Website. Insert the email address and verify with <b>"Verify Execution"</b> if is correct. Insert the password. Login in the site and verify with <b>"Verify Execution"</b> if it successed. The two error that will appear if it is the case, catch them and save them in an argument and sent it to Sequence <i>"Main_Pick_&_Pick_Branch_&_Verify_Execution"</i>
+
+Set the properties of the "Use Browser/Application" as follow:
+- Close - Never
+- Input Mode - Simulate
+- Open - If not open
+
+Activities used:
+* Log Message
+* Use Browser/Application
+* Assign
+* Try Catch
+* Type Into (Verify Execution)
+* Get Password
+* Type Into
+* Click (Verify Execution)
+
+2. Navigate to add Vendor
+### Navigate_to_add_Vendor
+Display a meesage in console that the robot will navigate to the "Add Vendor" page.
+
+Set the properties of the "Use Browser/Application" as follow:
+- Close - Never
+- Input Mode - Simulate
+- Open - If not open
+
+Activities used:
+* Log Message
+* Hover
+* Click
+
+3. Insert the Vendor
+### Insert_new_Vendor
+Use the <b>APP/WEB Recorder</b> to insert the vendor. When click on the "Save Vendor" verify with <b>"Verify Execution</b> if vendor was successfully add. Display a message box that tell the user the "Vendor added successfully"
+
+Set the properties of the "Use Browser/Application" as follow:
+- Close - Never
+- Input Mode - Chromium API
+- Open - If not open
+
+Activities used:
+* Use Browser/Application
+* Type into
+* Click (Verify Execution)
+* Message Box
+
 ## Main_Output_Methods_and_Output_Activities
 In this sequence I will use previous sequence, "Input Methods and Input activities.xaml" and I will add functionallity for extraction transaction numbers from Double UI. For every transaction added in the Double UI, I will extract the "transaction no" and insert in the excel file to the corespondent row
 
