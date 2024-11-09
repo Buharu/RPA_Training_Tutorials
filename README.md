@@ -70,6 +70,21 @@ Activities used:
 * Click (Verify Execution)
 * Message Box
 
+## Main_Parallel_Activity
+To calculate the tax based on the amount entered by the user. Parallel property condition is set: userInput < 3000. if the user enters a value less then 3000, then the tax amount to be paid is 0. if the user enters a value greater then or equal to 3000, then 8% tax is calculated.
+
+Activites used:
+* Sequence
+* Input Dialog
+* Assign
+* Log Message
+* Message Box
+* If
+
+Methods:
+* ToString
+* vbCrLf
+
 ## Main_Output_Methods_and_Output_Activities
 In this sequence I will use previous sequence, "Input Methods and Input activities.xaml" and I will add functionallity for extraction transaction numbers from Double UI. For every transaction added in the Double UI, I will extract the "transaction no" and insert in the excel file to the corespondent row
 
