@@ -124,6 +124,34 @@ Activities used:
 * Try-Catch
 * Assign
 
+## Main_Extract_arrow_indicator_NSE_website
+Use case 
+
+Build the automation to accomplish the following tasks:
+
+The process will navigate to the NSE website, extract the Sensex points, and retrieve the arrow indicator (red or green) to demonstrate the functionalities of:
+- UiExplorer, 
+- Property Explorer
+- Get Attribute.
+
+Once the robot has read the values and arrow indication, it'll write the details to the Excel report.
+
+Activities used:
+* Use Application/Browser
+* Get Attribute
+* Log Message
+* Get Text
+* Excel Process Scope
+* Use Excel File
+* Find First/Last Data Row
+* If
+* Write Cell
+
+Methods used:
+* Sheet
+* Cell
+* ToString
+* Contains
 
 ## Main_Output_Methods_and_Output_Activities
 In this sequence I will use previous sequence, "Input Methods and Input activities.xaml" and I will add functionallity for extraction transaction numbers from Double UI. For every transaction added in the Double UI, I will extract the "transaction no" and insert in the excel file to the corespondent row
