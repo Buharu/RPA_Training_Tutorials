@@ -41,6 +41,7 @@ Activities used:
 * Type Into
 * Click (Verify Execution)
 
+
 2. Navigate to add Vendor
 ### Navigate_to_add_Vendor
 Display a meesage in console that the robot will navigate to the "Add Vendor" page.
@@ -54,6 +55,7 @@ Activities used:
 * Log Message
 * Hover
 * Click
+
 
 3. Insert the Vendor
 ### Insert_new_Vendor
@@ -84,6 +86,44 @@ Activites used:
 Methods:
 * ToString
 * vbCrLf
+
+
+## Fix_a_RPA_Robot_add_new_functionalities
+This Process will:
+1. Search for "The Ice Age" movie in the IMBD webiste.
+2. Get the IMDb RATING.
+3. Displays it through the messagebox.
+
+<b>Solving</b>
+
+Changes I made:
+1. I change the browser because the edge didn't have the extension installed.
+2. Unified Application Target -> Selector:  from msedge.exe  to chrome.exe
+3. I indicate "Search" UI Element 
+4. I insert a "Type Into" Activity to insert the movie name
+5. I indicate the "Movie Card" and "Rating" UI Element 
+
+<b>Include the new requirements:</b>
+
+1. Implement a user input prompt to capture the movie title from the user.
+2. Use the movie title as input to search for the movie on the movie search page of the IMDB website.
+3. Extract the IMDB rating of the searched movie from the website.
+4. Display the retrieved IMDB rating through a message box.
+
+<b>Implementation steps</b>:
+
+1. Added an "Input Dialog" activity for the user to enter the movie name.
+2. Added a "Get Text" activity to retrieve the correct movie name.
+3. To identify the correct "Movie Card" UI Element, I modified the Fuzzy Selector to use the movie name from the variable. This addresses the issue with the Target and Anchor when the movie name changes.
+4. Added a "Try-Catch" activity to handle missing ratings.
+
+Activities used:
+* Input Dialog
+* Get Text
+* Insert dinamically the movie name
+* Try-Catch
+* Assign
+
 
 ## Main_Output_Methods_and_Output_Activities
 In this sequence I will use previous sequence, "Input Methods and Input activities.xaml" and I will add functionallity for extraction transaction numbers from Double UI. For every transaction added in the Double UI, I will extract the "transaction no" and insert in the excel file to the corespondent row
