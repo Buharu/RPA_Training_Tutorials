@@ -87,6 +87,38 @@ Methods:
 * ToString
 * vbCrLf
 
+## FixMyWorkflow_StartingProject
+Reads employee data from an Excel file, opens a browser window, navigates to the RPA Challenge Website, clicks on the "Start" button and enters the employee data into the RPA Challenge forms. 
+
+This project learned me how to use the debug tool and how to fix a project when it has issues. 
+
+Issues found and solutions applied:
+1. Compilation Error: 
+    Anchor 1 is not valid because no targeting methods are enabled.
+<b>Solution</b>
+Change the propery of "Target" from "TargetAnchorable" to null
+
+2. Failed to find the excel sheet
+<b>Solution</b>
+Replace the old path with the correct path
+
+3. Sheet name incorect writo
+<b>Solution</b>
+Identify the correct name of the sheet and replace from "Sheet12" to "Sheet1"
+
+4. Click "Start" Button activity error: "The Element was not found"
+<b>Solution</b>
+I indicate correct the button on the Browser. Also because it's an activity on For Each Column I surrended with a Try-Catch to pass correctly. 
+
+5. The "Type Into" activity write the name of the column and not the data from the current row.
+<b>Solution</b>
+I replace the old value with the CurrentRow value.
+
+6. The value of attribut aaname is incorrect
+<b>Solution</b>
+The old value was "Submit1". The correct value is "Submit"
+
+
 
 ## Fix_a_RPA_Robot_add_new_functionalities
 This Process will:
