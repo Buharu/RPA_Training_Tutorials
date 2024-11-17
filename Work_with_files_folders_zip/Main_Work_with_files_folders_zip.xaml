@@ -45,6 +45,7 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -101,9 +102,14 @@
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Asks the user to select a .zip file containing client information. Renames the contracts using the folder (company) name and stores the contract files in a dedicated folder.&#xA;&#xA;Preconditions:&#xA;- The .zip file contains folders named after client companies.&#xA;- The company folders contain contracts.&#xA;- The contract file names contain the string &quot;Contract&quot;. " DisplayName="Extract, Rename and Sort Invoices and Contracts" sap:VirtualizedContainerService.HintSize="1164.8000000000002,2222.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Asks the user to select a .zip file containing client information. Renames the contracts using the folder (company) name and stores the contract files in a dedicated folder.&#xA;&#xA;Preconditions:&#xA;- The .zip file contains folders named after client companies.&#xD;&#xA;&#xD;&#xA;Step 2: Extend&#xD;&#xA;&#xD;&#xA;Further develop the automation process built in the previous lesson. The task is to iterate through the documents extracted from the .zip file and extend the functionality to sort not only the contracts but also the invoices into their respective folders. &#xA;- The company folders contain contracts.&#xA;- The contract file names contain the string &quot;Contract&quot;. " DisplayName="Extract, Rename and Sort Invoices and Contracts" sap:VirtualizedContainerService.HintSize="1164.8000000000002,2870.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="InputFilePath" />
       <Variable x:TypeArguments="si:FileInfo" Name="InputFileInfo" />
@@ -135,7 +141,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetFileInfoX>
-    <ui:MultipleAssign DisplayName="Multiple Assign Folder Paths" sap:VirtualizedContainerService.HintSize="516.8,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign Folder Paths" sap:VirtualizedContainerService.HintSize="516.8,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -154,6 +160,14 @@
               <InArgument x:TypeArguments="x:String">[ExtractedFolderPath + "\Contracts"]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[InvoicesFolderPath]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[ExtractedFolderPath + "\Invoices"]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
@@ -165,7 +179,8 @@
       </sap:WorkflowViewStateService.ViewState>
     </uascw:ExtractFiles>
     <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Contracts Folder" sap:VirtualizedContainerService.HintSize="516.8,112.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_4" Path="[ContractsFolderPath]" />
-    <ui:ForEachFileX sap2010:Annotation.AnnotationText="Renames contracts and invoices in folder and moves them to dedicated folders." DisplayName="For Each File in Company Folder" Filter="*.pdf" Folder="[ExtractedFolderPath]" sap:VirtualizedContainerService.HintSize="516.8,1046.4" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="True" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Contracts Folder" sap:VirtualizedContainerService.HintSize="516.8,112.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_5" Path="[InvoicesFolderPath]" />
+    <ui:ForEachFileX sap2010:Annotation.AnnotationText="Renames contracts and invoices in folder and moves them to dedicated folders." DisplayName="For Each File in Company Folder" Filter="*.pdf" Folder="[ExtractedFolderPath]" sap:VirtualizedContainerService.HintSize="516.8,1549.6" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="True" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
       <ui:ForEachFileX.Body>
         <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
           <ActivityAction.Argument1>
@@ -174,14 +189,14 @@
           <ActivityAction.Argument2>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
           </ActivityAction.Argument2>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,728.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,1232" sap2010:WorkflowViewState.IdRef="Sequence_21">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:LogMessage DisplayName="Log Message for processing file" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Current processing file: &quot; + CurrentFile.Name]" />
-            <If Condition="[CurrentFile.Name.Contains(&quot;Contract&quot;)]" DisplayName="If Contract" sap:VirtualizedContainerService.HintSize="449.6,494.4" sap2010:WorkflowViewState.IdRef="If_8">
+            <If Condition="[CurrentFile.Name.Contains(&quot;Contract&quot;)]" DisplayName="If Contract" sap:VirtualizedContainerService.HintSize="449.6,503.2" sap2010:WorkflowViewState.IdRef="If_8">
               <If.Then>
                 <Sequence DisplayName="If Contract" sap:VirtualizedContainerService.HintSize="416,243.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <sap:WorkflowViewStateService.ViewState>
@@ -194,6 +209,27 @@
               </If.Then>
               <If.Else>
                 <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[CurrentFile.Name.Contains(&quot;Invoice&quot;)]" DisplayName="If Contract" sap:VirtualizedContainerService.HintSize="449.6,494.4" sap2010:WorkflowViewState.IdRef="If_9">
+              <If.Then>
+                <Sequence DisplayName="If Contract" sap:VirtualizedContainerService.HintSize="416,243.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[InvoicesFolderPath + &quot;\&quot; + CurrentFile.Name.Substring(0, CurrentFile.Name.Length - CurrentFile.Extension.Length) + &quot; &quot; + CurrentFile.Directory.Name]" DisplayName="Move Contract File" sap:VirtualizedContainerService.HintSize="382.4,183.2" sap2010:WorkflowViewState.IdRef="MoveFile_2" Overwrite="True" Path="[CurrentFile.FullName]" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

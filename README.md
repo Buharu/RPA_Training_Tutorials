@@ -3,6 +3,35 @@ This repository contains all the mini-projects I have developed. The primary goa
 
 # The mini-projects are:
 
+## Work_with_files_folders_zip
+Asks the user to select a .zip file containing client information. Renames the contracts using the folder (company) name and stores the contract files in a dedicated folder.
+
+Preconditions:
+- The .zip file contains folders named after client companies.
+- The company folders contain contracts.
+- The contract file names contain the string "Contract". 
+
+Step 2: Extend
+
+Further develop the automation process built in the previous lesson. The task is to iterate through the documents extracted from the .zip file and extend the functionality to sort not only the contracts but also the invoices into their respective folders. 
+- The company folders contain contracts.
+- The contract file names contain the string "Contract". 
+
+Create a specified folder for invoices.
+Rename all invoice files by appending the original invoice name with the respective company name (e.g., Invoice 001 01092022 Megatronic Incorporated.pdf).
+Move the renamed invoice files to the Invoices folder.
+
+Activities used:
+* Browser For Input File
+* Browser for Folder
+* Get File info
+* Multiple Assign
+* Extract/Unzip Files
+* For Each File in Folder
+* Log Message
+* IF
+* Move File
+
 ## Check_App_State_&_Verify_Execution
 Use the "Pick Activity", "Pick Branch Activity" and "verify execution" features to check if the user is logged in to the ACME page. 
 If the user is not logged in, log an error message. If the user is logged in, navigate to Vendor > Add New Vendor section. 
