@@ -3,7 +3,9 @@ This repository contains all the mini-projects I have developed. The primary goa
 
 # The mini-projects are:
 
-## Work_with_files_folders_zip
+## Work_with_pdf_files_folders_zip
+
+### Main_Work_with_files_folders_zip
 Asks the user to select a .zip file containing client information. Renames the contracts using the folder (company) name and stores the contract files in a dedicated folder.
 
 Preconditions:
@@ -31,6 +33,66 @@ Activities used:
 * Log Message
 * IF
 * Move File
+
+Methods used:
+* FileInfo.Directory
+* ToString
+* Filename.Name
+* Containts
+* Substring
+* Length
+* Filename.Extention
+
+### Main_Working_with_PDF_files
+
+Read a PDF file using native activity and OCR activity
+
+Activities used:
+* Browser for File
+* Read PDF Text
+* Read PDF With OCR
+* Write Text File
+* Message Box
+
+### Main_Extract_data_from_Invoices
+You have received an E-mail containing scanned PDF files containing the latest invoices. Your task is to create a workflow that extracts the Date and Total from these invoices and write them into an excel file.
+
+Activities used:
+* Browser for Folder
+* Build Data Table
+* For Each File in Folder
+* Read PDF with OCR
+* MultipleAssign
+* Log Message
+* Add Data Row
+* Invoke WorkFlow File
+* Write Range Workbook
+
+Methods used:
+* FullName
+* ToString
+* Substring
+* IndexOf
+* String.Format
+
+### Main_Extract_data_from_multiple_pdf_files
+Consider a mid-sized company, facing the herculean task of extracting specific data from all the invoices generated during a month. The required data from the PDF files are credit amount, balance due, and invoice number.
+
+Activities used:
+* Browser For Folder
+* Build Data Table
+* For each File in Folder
+* Assign
+* Use Application/Browser
+* Get Text
+* Add Data Row
+* Invoke WorkFlow File
+
+Methods used:
+* FullName
+* ToString
+* Replace
+* Name
 
 ## Check_App_State_&_Verify_Execution
 Use the "Pick Activity", "Pick Branch Activity" and "verify execution" features to check if the user is logged in to the ACME page. 
