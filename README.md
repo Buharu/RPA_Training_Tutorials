@@ -3,6 +3,41 @@ This repository contains all the mini-projects I have developed. The primary goa
 
 # The mini-projects are:
 
+## Use_Orchestrator_Resources
+Login to the ACME site with the credential store in an asset on Orchestrator. Extract from Work Items all the elements, from all pages and save the 3 columns in the queue store on Orchestrator
+
+### Main_Use_Queue_Assets
+
+Activities Used:
+* Use Application/Browser
+* Pick
+* Pick_Branch
+* Find Element
+* Invoke WorkFlow
+
+### LoginInACMEWorkflow 
+Login in the website by taking the credential from the Assets stored in Orchestrator
+
+* Sequence
+* Log Message
+* Use Application/Browser
+* Get Credential (Assets)
+* Type Into
+* Click
+
+### ACMEWorkItemMeniu
+Navigate to Work Item page and extract all the item found in list from all pages and save the item in the Queue stored in Orchestrator
+
+* Sequence
+* Log Message
+* Click
+* Extract Data Table
+* For Each Row in Data Table
+* Add Queue Item
+
+### LogoutFromACMEWorkflow 
+Logout the current user
+
 ## Work_with_pdf_files_folders_zip
 
 ### Main_Work_with_files_folders_zip
