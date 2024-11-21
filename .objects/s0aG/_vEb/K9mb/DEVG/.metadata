@@ -1,0 +1,13 @@
+﻿{
+  "Name": "EmployeeDetails",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "DEVGNKIYy0K8j5jRt-rjKA",
+  "Reference": "CV9i7rpxUEW0ABYcZK_ksQ/DEVGNKIYy0K8j5jRt-rjKA",
+  "ParentRef": "CV9i7rpxUEW0ABYcZK_ksQ/K9mbIMrlCkehynOb91p3-g",
+  "Created": "2024-11-20T21:06:08.7200154Z",
+  "Updated": "2024-11-20T21:06:08.7200154Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

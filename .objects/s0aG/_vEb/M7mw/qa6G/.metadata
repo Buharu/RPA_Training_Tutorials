@@ -1,0 +1,16 @@
+﻿{
+  "Name": "EmployeeDetails",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "qa6GKjoC9kCykF__hXSLIg",
+  "Reference": "CV9i7rpxUEW0ABYcZK_ksQ/qa6GKjoC9kCykF__hXSLIg",
+  "ParentRef": "CV9i7rpxUEW0ABYcZK_ksQ/M7mwhJ_CKEO63F0J30oObA",
+  "Created": "2024-11-20T21:10:06.3178632Z",
+  "Updated": "2024-11-20T21:10:33.3886557Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Health Care",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "nwgsxosOy0aOey0e-E5GVg",
+  "Reference": "CV9i7rpxUEW0ABYcZK_ksQ/nwgsxosOy0aOey0e-E5GVg",
+  "ParentRef": "CV9i7rpxUEW0ABYcZK_ksQ/K9mbIMrlCkehynOb91p3-g",
+  "Created": "2024-11-20T21:06:08.4624454Z",
+  "Updated": "2024-11-20T21:06:08.4624454Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
